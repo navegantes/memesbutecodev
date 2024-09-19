@@ -1,0 +1,157 @@
+Lista usuarios
+
+Jayp: jayp-xgh,
+Funnie: brunofunnie,
+Cowboy: deablofk,
+Iank: iankyy,
+Pedro: pedropietro,
+Miranda: hsmiranda,
+Diego-Rocket: diego3g,
+Bloise: bloiseleo,
+Jaum: jaumdev1,
+José: cafe-e-codigo,
+Sonee: djonatah,
+Toninho: JairAssisDev,
+Astaroth: astahjmo,
+Ana: AninhaPardini,
+Gio: giomartinsdev,
+Akita: akitaonrails,
+Gus: Gus-fs,
+Joke: lucas-koji,
+Folle: joaofolle,
+Thassia: thassiadevilart,
+Gasparzinha: carolinarigaudfelix,
+Palestrinha: Manuel-Antunes,
+Henrique: devhenrique22,
+Montanha: FernandoVicenteGodinho,
+ZéBiscoito: juniorx57,
+CodeMoreira: CodeMoreira,
+Vinheteiro: matheusvidaltenorio,
+FelipeNeto: Wadsom ,
+DevNelson: nsaraiva,
+
+
+
+
+  // Vinicius
+  // export async function getGithubUsers(users) {
+  //   const list = [];
+  //   const fetch = users.map(async (user) =>
+  //     fetch(`https://api.github.com/users/${user}`, {
+  //       headers: {
+  //         Authorization: `Bearer ${process.env.GITHUB_API_TOKEN}`,
+  //       },
+  //       method: "GET",
+  //     })
+  //       .then((resp) => resp.json())
+  //       .then((data) => {
+  //         list.push({
+  //           login: data.login,
+  //           avatar_url: data.avatar_url,
+  //           id: data.id,
+  //           bio: data.bio,
+  //           name: data.name,
+  //           location: data.location,
+  //         });
+  //       })
+  //   );
+
+  //   await Promise.all(fetch);
+
+  //   return list;
+  // }
+
+  // list.push({
+  //   login: await data.login,
+  //   avatar_url: await data.avatar_url,
+  //   id: await data.id,
+  //   bio: await data.bio,
+  //   name: await data.name,
+  //   location: await data.location,
+  // });
+
+  // return list;
+
+  // console.log(Promise.all(result));
+
+  // return Promise.all(result);
+// }
+
+// Cowboy
+
+// // Replace with your GitHub personal access token
+// const GITHUB_TOKEN = "githubtoken";
+
+// // GraphQL query for multiple users
+// const query = `
+//   query ($logins: [String!]!) {
+//     users: usersFromLogins(logins: $logins) {
+//       name
+//       login
+//       bio
+//       location
+//       avatarUrl
+//     }
+//   }
+// `;
+
+// // Function to fetch GitHub data for multiple users
+// async function fetchMultipleGitHubUsers(usernames) {
+//   const url = "https://api.github.com/graphql";
+
+//   // Set up the request headers
+//   const headers = {
+//     "Content-Type": "application/json",
+//     Authorization: `Bearer ${GITHUB_TOKEN}`,
+//   };
+
+//   // Create a dynamic query to fetch multiple users
+//   const multipleUsersQuery = usernames
+//     .map(
+//       (username, index) => `
+//       user${index}: user(login: "${username}") {
+//         name
+//         login
+//         bio
+//         location
+//         avatarUrl
+//       }
+//     `
+//     )
+//     .join("");
+
+//   const fullQuery = `
+//     query {
+//       ${multipleUsersQuery}
+//     }
+//   `;
+
+//   // Request body with the dynamic query
+//   const body = JSON.stringify({
+//     query: fullQuery,
+//   });
+
+//   // Fetch request
+//   try {
+//     const response = await fetch(url, {
+//       method: "POST",
+//       headers: headers,
+//       body: body,
+//     });
+
+//     if (!response.ok) {
+//       throw new Error(`Error: ${response.status}`);
+//     }
+
+//     const result = await response.json();
+
+//     // Extract users data
+//     console.log(result.data);
+//     return result.data;
+//   } catch (error) {
+//     console.error("Error fetching data:", error);
+//   }
+// }
+
+// // Call the function with an array of GitHub usernames
+// fetchMultipleGitHubUsers(["deablofk", "felipepassion", "torvalds"]); // Replace with desired usernames

@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "server": "node -r dotenv/config server/api.js",
-    "test-server": "json-server --watch server/data.json --routes server/routes.json -w -p 8000"
+    "test-server": "json-server --watch server/testData.json --routes server/routes.json -w -p 8000"
   },
   "dependencies": {
     "@radix-ui/react-toast": "^1.2.1",
@@ -35,7 +35,7 @@
     "@types/cors": "^2.8.17",
     "@types/express": "^4.17.21",
     "@types/node": "^22.5.5",
-    "@types/react": "^18.3.3",
+    "@types/react": "^18.3.9",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.20",

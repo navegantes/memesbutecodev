@@ -30,31 +30,31 @@ const ChipTabs = () => {
 // @ts-expect-error
 const Chip = ({ text, selected, setSelected, linkTo }) => {
   return (
-    <a href={linkTo}>
-      <button
-        onClick={() => setSelected(text)}
+    // <a href={linkTo}>
+    <a
+      href={linkTo}
+      onClick={() => setSelected(text)}
+      className={`${
+        selected
+          ? "text-buteco-white"
+          : "text-gray-500 hover:text-buteco-macchi hover:bg-buteco-cream"
+      } text-lg font-bold py-2 px-4 rounded-full relative`}
+    >
+      <span
         className={`${
-          selected
-            ? "text-buteco-white"
-            : "text-gray-500 hover:text-buteco-macchi hover:bg-buteco-cream"
-        } text-lg font-bold py-2 px-4 rounded-full relative`}
+          selected &&
+          "absolute inset-0 z-0 rounded-full bg-gradient-to-r from-buteco-orange to-buteco-pilsen text-buteco-macchi"
+        } relative z-10`}
       >
-        <span
-          className={`${
-            selected &&
-            "absolute inset-0 px-4 py-2 z-0 rounded-full bg-gradient-to-r from-buteco-orange to-buteco-pilsen text-buteco-macchi"
-          } relative z-10`}
-        >
-          {text}
-        </span>
-        {selected && (
-          <motion.span
-            layoutId="pill-tab"
-            transition={{ type: "spring", duration: 0.5 }}
-            className="absolute inset-0 z-0 rounded-full bg-gradient-to-r from-buteco-orange to-buteco-pilsen"
-          ></motion.span>
-        )}
-      </button>
+        {text}
+      </span>
+      {selected && (
+        <motion.span
+          layoutId="pill-tab"
+          transition={{ type: "spring", duration: 0.5 }}
+          className="absolute inset-0 z-0 rounded-full bg-gradient-to-r from-buteco-orange to-buteco-pilsen"
+        ></motion.span>
+      )}
     </a>
   );
 };

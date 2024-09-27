@@ -10,7 +10,7 @@ export const SlideTabsExample = () => {
   );
 };
 
-const SlideTabs = () => {
+export const SlideTabs = () => {
   const [position, setPosition] = useState({
     left: 0,
     width: 0,
@@ -85,7 +85,7 @@ const Cursor = ({ position }) => {
       animate={{
         ...position,
       }}
-      className="absolute z-0 h-12 rounded-full bg-buteco-orange"
+      className="absolute z-0 h-12 rounded-full bg-buteco-orange "
     />
   );
 };

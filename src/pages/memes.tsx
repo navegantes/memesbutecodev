@@ -17,7 +17,8 @@ export function Memes() {
 
   useEffect(() => {
     (async () => {
-      const data: DataType = await getContent();
+      const result = await getContent();
+      const data = await result.json();
 
       setContent(data);
       setIsLoading(false);

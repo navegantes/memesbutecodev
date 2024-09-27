@@ -6,6 +6,7 @@ import { Home } from "./pages/home";
 import { Header } from "./components/header";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { NavbarProvider } from "./context/navbarContext";
 
 const router = createBrowserRouter([
   {
@@ -32,7 +33,7 @@ const router = createBrowserRouter([
 
 export function App() {
   return (
-    <>
+    <NavbarProvider>
       <Header />
       <RouterProvider router={router} />
       <ToastContainer
@@ -46,6 +47,6 @@ export function App() {
         draggable
         pauseOnHover
       />
-    </>
+    </NavbarProvider>
   );
 }

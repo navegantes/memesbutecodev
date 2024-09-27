@@ -1,37 +1,8 @@
 import express from "express";
 import { getLinks, getGithubUsers } from "./services.js";
+import { usersList } from "./usersData.js";
 
 export const routes = express.Router();
-
-const usersList = [
-  "jayp-xgh",
-  "brunofunnie",
-  "deablofk",
-  "iankyy",
-  "pedropietro",
-  "hsmiranda",
-  "bloiseleo",
-  "jaumdev1",
-  "cafe-e-codigo",
-  "djonatah",
-  "JairAssisDev",
-  "astahjmo",
-  "AninhaPardini",
-  "giomartinsdev",
-  "Gus-fs",
-  "lucas-koji",
-  "joaofolle",
-  "thassiadevilart",
-  "carolinarigaudfelix",
-  "Manuel-Antunes",
-  "devhenrique22",
-  "FernandoVicenteGodinho",
-  "juniorx57",
-  "CodeMoreira",
-  "matheusvidaltenorio",
-  "Wadsom",
-  "nsaraiva",
-];
 
 routes.get("/api/content", async (_, res) => {
   try {

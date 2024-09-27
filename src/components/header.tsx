@@ -3,23 +3,24 @@ import { ImGithub } from "react-icons/im";
 import { HiLightBulb } from "react-icons/hi";
 import { FaDiscord } from "react-icons/fa";
 import { Bounce, toast, ToastContainer } from "react-toastify";
-import { useState } from "react";
+// import { useState } from "react";
 import ChipTabs from "./ChipTabs";
+// import { SlideTabs } from "./SlideTab";
 // import { SlideTabsExample } from "./SlideTab";
 // import { useLocation } from "react-router-dom";
 // import ChipTabs from "./ChipTabs";
 
 export function Header() {
-  const [currentNavPath, setCurrentNavPath] = useState<string>("");
+  // const [currentNavPath, setCurrentNavPath] = useState<string>("");
   // const location = useLocation();
-  const fullURL = window.location.href.split("/");
-  const route = fullURL[fullURL.length - 1];
+  // const fullURL = window.location.href.split("/");
+  // const route = fullURL[fullURL.length - 1];
   // console.log(location);
 
-  const handleClick = (path: string) => {
-    setCurrentNavPath(path);
-    console.log("PATH: ", path);
-  };
+  // const handleClick = (path: string) => {
+  //   setCurrentNavPath(path);
+  //   console.log("PATH: ", path);
+  // };
 
   return (
     <header className="flex flex-row items-center justify-center gap-6 p-4 mb-6 border-b-2 border-b-buteco-lager bg-buteco-dark">
@@ -54,7 +55,7 @@ export function Header() {
       </nav> */}
 
       <ChipTabs />
-      {/* <SlideTabsExample /> */}
+      {/* <SlideTabs /> */}
 
       <div>
         <button

@@ -11,7 +11,7 @@ export function CommandCard({ title, tagCommand, bodyText }: CommandCardTypes) {
         <span className="text-xl font-bold text-buteco-pilsen font-FigTree">
           {title}
         </span>
-        <span className="bg-[#4C81C0] px-2 rounded-e-md rounded-bl-md">
+        <span className="flex items-center bg-[#4C81C0] px-2 rounded-e-md rounded-bl-md">
           {tagCommand}
         </span>
       </div>

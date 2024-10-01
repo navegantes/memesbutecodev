@@ -24,7 +24,7 @@ const cardVariants: Variants = {
 
 export function ButecosMoe() {
   const hoverImg =
-    "hover:scale-[2] hover:z-20 hover:rotate-0 hover:transition hover:border-2 hover:rounded-lg hover:border-buteco-pilsen";
+    "hover:scale-[2] hover:z-20 hover:rotate-0 hover:transition hover:border-2 hover:rounded-lg hover:border-buteco-orange";
   return (
     <>
       <HeaderSubSection

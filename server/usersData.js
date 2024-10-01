@@ -30,6 +30,7 @@ export const usersList = [
 ];
 // "ViniciusKGilabel",
 // "MrsRina ",
+// "MachadoGB",
 
 // "GusCelleguim",
 // "maiconpavi",
@@ -87,7 +88,7 @@ export const testimonies = [
     login: "cafe-e-codigo",
     id: 129200408,
     testimony:
-      "Excepteur pariatur deserunt culpa eu aliquip dolore consectetur. Laboris elit incididunt proident veniam irure aute sint. Velit aute eu incididunt non adipisicing. Incididunt laborum dolor esse tempor dolore consectetur mollit. Nostrud non reprehenderit ad occaecat excepteur do veniam sint ad ex aliqua qui eu pariatur. Fugiat et commodo veniam culpa cillum irure irure labore tempor deserunt Lorem. Aliqua aute eiusmod culpa id esse amet.",
+      "Olha que loco né cara. Na época que eu começei a programar não tinha uma comunidade tão interessante como o Buteco dos Devs.",
   },
   {
     login: "djonatah",
@@ -116,7 +117,8 @@ export const testimonies = [
   {
     login: "giomartinsdev",
     id: 125399281,
-    testimony: "Fala aí rapaziada. Esse servidor é manero hein.",
+    testimony:
+      "Fala aí rapaziada. Esse servidor é manero hein. Todo jovem aprendiz deveria fazer parte mané!",
   },
   {
     login: "Gus-fs",
@@ -134,7 +136,7 @@ export const testimonies = [
     login: "joaofolle",
     id: 13815907,
     testimony:
-      "Olá rapazes! Deixa eu te falar esse servidor é o melhor neah, tá ligaduo",
+      "Olá rapazes! Deixa eu te falar o servidor do Buteco é o melhor neah, tá ligaduo",
   },
   {
     login: "thassiadevilart",
@@ -164,7 +166,7 @@ export const testimonies = [
     login: "FernandoVicenteGodinho",
     id: 100453396,
     testimony:
-      "Excepteur pariatur deserunt culpa eu aliquip dolore consectetur. Laboris elit incididunt proident veniam irure aute sint. Velit aute eu incididunt non adipisicing. Incididunt laborum dolor esse tempor dolore consectetur mollit. Nostrud non reprehenderit ad occaecat excepteur do veniam sint ad ex aliqua qui eu pariatur. Fugiat et commodo veniam culpa cillum irure irure labore tempor deserunt Lorem. Aliqua aute eiusmod culpa id esse amet.",
+      "Não adianta ser maomé, não vai me mover para outro servidor do discord. O Buteco dos Devs é o melhor.",
   },
   {
     login: "juniorx57",
@@ -176,7 +178,7 @@ export const testimonies = [
     login: "CodeMoreira",
     id: 78581400,
     testimony:
-      "Fala meu bom. Tudo certinho, tudo belezinha? Essa comunidade do Buteco dos Dev óh é daorinha recomendo.",
+      "Amo essa comunidade descontraída e com pessoas muito legais e inteligentes! Recomendo muito para qualquer um!",
   },
   {
     login: "matheusvidaltenorio",

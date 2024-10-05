@@ -226,6 +226,6 @@ export const testimonies = [
     login: "GabriielBento",
     id: 103751798,
     testimony:
-      "Excepteur pariatur deserunt culpa eu aliquip dolore consectetur. Laboris elit incididunt proident veniam irure aute sint. Velit aute eu incididunt non adipisicing.",
+      "Ôh gente alguém ajuda aqui? Como que eu faço pra enviar depoimento pro site do Buteco?",
   },
 ];

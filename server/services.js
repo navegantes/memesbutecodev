@@ -38,7 +38,7 @@ export async function getLinks(url) {
 export async function getGithubUsers(users) {
   const baseUrl = "https://api.github.com/users";
   const list = [];
-  const API_TOKEN = `${process.env.GITHUB_API_TOKEN}`;
+  const API_TOKEN = `${process.env.GITHUB_API_TOKEN}` || "";
 
   const resp = await Promise.all(
     await users.map(

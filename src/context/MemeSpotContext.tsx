@@ -1,5 +1,5 @@
 import { createContext, ReactNode, useContext, useEffect, useState } from "react";
-import { getContent } from "../services/getContentData";
+// import { getContent } from "../services/getContentData";
 
 interface MemeSpotContextType {
   imgContent: string[];
@@ -39,10 +39,10 @@ export function MemeSpotProvider({ children }: MemeSpotProviderProps) {
 
   useEffect(() => {
     (async () => {
-      const result = await getContent();
-      const data = await result.json();
+      // const result = await getContent();
+      // const data = await result.json();
 
-      setData(data?.images);
+      // setData(data?.images);
       handleLoadingState(false);
     })();
   }, []);

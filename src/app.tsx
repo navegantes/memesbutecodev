@@ -24,11 +24,11 @@ const router = createBrowserRouter([
   },
   {
     path: "/videos",
-    element: <Audios />,
+    element: <div className="flex justify-center">Videos</div>,
   },
   {
     path: "/docs",
-    element: <Audios />,
+    element: <div className="flex justify-center">Documentos</div>,
   },
 ]);
 

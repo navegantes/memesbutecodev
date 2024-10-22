@@ -145,15 +145,6 @@
       "testimony": "Ah vão dormir seus mama hola, o que cês tá mole. O servidor não é pra vocês ficar zoando não, nossa comunidade é a melhor do Discord, ná onde que têm outro assim?."
     },
     {
-      "login": "brunofunnie",
-      "avatar_url": "https://avatars.githubusercontent.com/u/5279392?v=4",
-      "id": 5279392,
-      "bio": "Full Stack Developer",
-      "name": "Bruno Funnie",
-      "location": "São Paulo",
-      "testimony": "Excepteur pariatur deserunt culpa eu aliquip dolore consectetur. Laboris elit incididunt proident veniam irure aute sint. Velit aute eu incididunt non adipisicing."
-    },
-    {
       "login": "deablofk",
       "avatar_url": "https://avatars.githubusercontent.com/u/51531895?v=4",
       "id": 51531895,
@@ -163,15 +154,6 @@
       "testimony": "Esse server é baum, só não é tão baum assim pq ninguém me dá emprego. Vocês já viram os novos atalhos que eu configurei no meu novo teclado?"
     },
     {
-      "login": "bloiseleo",
-      "avatar_url": "https://avatars.githubusercontent.com/u/105981050?v=4",
-      "id": 105981050,
-      "bio": "Full-Stack Developer | RJ",
-      "name": "Leonardo Bloise",
-      "location": "Rio de Janeiro",
-      "testimony": "Excepteur pariatur deserunt culpa eu aliquip dolore consectetur. Laboris elit incididunt proident veniam irure aute sint. Velit aute eu incididunt non adipisicing."
-    },
-    {
       "login": "cafe-e-codigo",
       "avatar_url": "https://avatars.githubusercontent.com/u/129200408?v=4",
       "id": 129200408,
@@ -179,6 +161,42 @@
       "name": "José A",
       "location": null,
       "testimony": "Olha que loco né cara. Na época que eu começei a programar não tinha uma comunidade tão interessante como o Buteco dos Devs."
+    },
+    {
+      "login": "FernandoVicenteGodinho",
+      "avatar_url": "https://avatars.githubusercontent.com/u/100453396?v=4",
+      "id": 100453396,
+      "bio": null,
+      "name": "Fernando Vicente Godinho",
+      "location": null,
+      "testimony": "Não adianta ser maomé, não vai me mover para outro servidor do discord. O Buteco dos Devs é o melhor."
+    },
+    {
+      "login": "GabriielBento",
+      "avatar_url": "https://avatars.githubusercontent.com/u/103751798?v=4",
+      "id": 103751798,
+      "bio": null,
+      "name": "Gabriel Bento",
+      "location": "Crateús CE",
+      "testimony": "Ôh gente alguém ajuda aqui? Como que eu faço pra enviar depoimento pro site do Buteco?"
+    },
+    {
+      "login": "brunofunnie",
+      "avatar_url": "https://avatars.githubusercontent.com/u/5279392?v=4",
+      "id": 5279392,
+      "bio": "Full Stack Developer",
+      "name": "Bruno Funnie",
+      "location": "São Paulo",
+      "testimony": "Excepteur pariatur deserunt culpa eu aliquip dolore consectetur. Laboris elit incididunt proident veniam irure aute sint. Velit aute eu incididunt non adipisicing."
+    },
+    {
+      "login": "bloiseleo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/105981050?v=4",
+      "id": 105981050,
+      "bio": "Full-Stack Developer | RJ",
+      "name": "Leonardo Bloise",
+      "location": "Rio de Janeiro",
+      "testimony": "Excepteur pariatur deserunt culpa eu aliquip dolore consectetur. Laboris elit incididunt proident veniam irure aute sint. Velit aute eu incididunt non adipisicing."
     },
     {
       "login": "Djonatah",
@@ -205,7 +223,7 @@
       "bio": "Entusiasta na tecnologia, tenho 21 anos e sou apaixonada por inovação e ideias que mudam o mundo, Project Manager, Front end e mãe <3.",
       "name": "Ana Luiza Pardini",
       "location": "Brasil",
-      "testimony": "Ôh trêm baum esse Buteco dos Devs sô. A comunidade é linda igual o mac. no meu mac parece"
+      "testimony": "Ôh trêm baum esse Buteco dos Devs viu sô. A comunidade é linda igual o mac. no meu mac parece"
     },
     {
       "login": "Gus-fs",
@@ -233,15 +251,6 @@
       "name": "Carlos Henrique Fernandes",
       "location": "Pau dos Ferros - RN",
       "testimony": "Excepteur pariatur deserunt culpa eu aliquip dolore consectetur. Laboris elit incididunt proident veniam irure aute sint. Velit aute eu incididunt non adipisicing."
-    },
-    {
-      "login": "FernandoVicenteGodinho",
-      "avatar_url": "https://avatars.githubusercontent.com/u/100453396?v=4",
-      "id": 100453396,
-      "bio": null,
-      "name": "Fernando Vicente Godinho",
-      "location": null,
-      "testimony": "Não adianta ser maomé, não vai me mover para outro servidor do discord. O Buteco dos Devs é o melhor."
     },
     {
       "login": "Wadsom",
@@ -278,15 +287,6 @@
       "name": "Pedro Souza",
       "location": null,
       "testimony": "Excepteur pariatur deserunt culpa eu aliquip dolore consectetur. Laboris elit incididunt proident veniam irure aute sint. Velit aute eu incididunt non adipisicing."
-    },
-    {
-      "login": "GabriielBento",
-      "avatar_url": "https://avatars.githubusercontent.com/u/103751798?v=4",
-      "id": 103751798,
-      "bio": null,
-      "name": "Gabriel Bento",
-      "location": "Crateús CE",
-      "testimony": "Ôh gente alguém ajuda aqui? Como que eu faço pra enviar depoimento pro site do Buteco?"
     }
   ],
   "content": {

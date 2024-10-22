@@ -1,13 +1,12 @@
 
 # TODOS
+[ ] - Seleção deve deslizar na navbar
 [ ] - Pagina Memes deve ter paginação;
       Carregamento conforme o scroll/botão "abrir mais"
-[ ] - Tab navbar deve se manter selecionado ao clickar
+[ ] - carrossel infinito autoplay
+[x] - Tab navbar deve se manter selecionado ao clickar
 
 
-
-# Recursos e Firulas
-- carrossel infito autoplay
 
 # Buteco Bot
 - https://github.com/brunofunnie/butecobot/blob/main/docs/BotCommands.md

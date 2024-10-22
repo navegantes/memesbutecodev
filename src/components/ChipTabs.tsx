@@ -1,6 +1,6 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const tabs = [
   ["/memes", "Memes"],
@@ -29,8 +29,13 @@ const ChipTabs = () => {
 
 // @ts-expect-error
 const Chip = ({ text, selected, setSelected, linkTo }) => {
+  useEffect(() => {
+    if (window.location.pathname === linkTo) {
+      setSelected(text);
+    }
+  }, []);
+
   return (
-    // <a href={linkTo}>
     <a
       href={linkTo}
       onClick={() => setSelected(text)}

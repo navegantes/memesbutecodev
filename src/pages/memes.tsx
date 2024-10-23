@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { FaArrowCircleUp } from "react-icons/fa";
-import { MemeSpot } from "../components/Memes/MemeSpot";
-import { MemesList } from "../components/Memes/MemesList";
+import { MemeSpot } from "../components/MemesPage/MemeSpot";
+import { MemesList } from "../components/MemesPage/MemesList";
 import { useMemeSpot } from "../context/MemeSpotContext";
 import { getContent } from "../services/getContentData";
 

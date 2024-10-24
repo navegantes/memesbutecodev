@@ -4,7 +4,7 @@ import { useMemeSpot } from "../../context/MemeSpotContext";
 const baseUrl = import.meta.env.VITE_APP_BASEURL;
 
 export function MemesList() {
-  const { imgContent, isLoading, handleCLick } = useMemeSpot();
+  const { dataContent, isLoading, handleCLick } = useMemeSpot();
 
   const sliceSize = 15;
 
@@ -14,7 +14,7 @@ export function MemesList() {
         {isLoading ? (
           <Loading />
         ) : (
-          imgContent?.map((item: string) => {
+          dataContent?.map((item: string) => {
             return (
               <div
                 key={item}

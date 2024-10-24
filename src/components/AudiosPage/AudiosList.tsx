@@ -4,9 +4,9 @@ import { useMemeSpot } from "../../context/MemeSpotContext";
 const baseUrl = import.meta.env.VITE_APP_BASEURL;
 
 export function AudiosList() {
-  const { imgContent, isLoading, handleCLick } = useMemeSpot();
+  const { dataContent, isLoading, handleCLick } = useMemeSpot();
 
-  const sliceSize = 25;
+  const sliceSize = 35;
 
   return (
     <>
@@ -14,7 +14,7 @@ export function AudiosList() {
         {isLoading ? (
           <Loading />
         ) : (
-          imgContent?.map((item: string) => {
+          dataContent?.map((item: string) => {
             return (
               <div
                 key={item}
@@ -25,18 +25,14 @@ export function AudiosList() {
                   className="object-cover bg-slate-200 h-full transition rounded-lg hover:scale-[2.5] hover:w-fit hover:h-fit w-full max-w-32"
                   src={`${baseUrl}/${item}`}
                 /> */}
-                <audio
-                  className=" text-buteco-orange"
-                  src={`${baseUrl}/${item}`}
-                  controls
-                />
+                <audio src={`${baseUrl}/${item}`} controls />
                 {/* <source type="audio/mpeg" />
                 </audio> */}
                 <p className="flex justify-center w-full">
                   {item.split(".")[0].length > sliceSize
-                    ? item.slice(0, sliceSize - 5) +
+                    ? item.slice(0, sliceSize - 15) +
                       "..." +
-                      item.slice(item.length - sliceSize + 5, item.length)
+                      item.slice(item.length - sliceSize + 15, item.length)
                     : item}
                 </p>
               </div>

@@ -2,13 +2,15 @@ import { createContext, ReactNode, useContext, useEffect, useState } from "react
 // import { getContent } from "../services/getContentData";
 
 interface MemeSpotContextType {
-  imgContent: string[];
+  dataContent: string[];
   selectedItem: string;
   isClicked: boolean;
   isLoading: boolean;
+  indexItem: number;
   setData: (data: string[]) => void;
   arrowsClick: (clickedItem: string, forward: boolean) => void;
   handleCLick: (item: string) => void;
+  setIndexItem: (index: number) => void;
   handleLoadingState: (value: boolean) => void;
   setMemeSpotItem: (clickedItem: string) => void;
 }
@@ -31,7 +33,7 @@ interface MemeSpotProviderProps {
 }
 
 export function MemeSpotProvider({ children }: MemeSpotProviderProps) {
-  const [imgContent, setImgContent] = useState<string[]>([]);
+  const [dataContent, setDataContent] = useState<string[]>([]);
   const [selectedItem, setSelectedItem] = useState("");
   const [isClicked, setIsClicked] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
@@ -48,11 +50,11 @@ export function MemeSpotProvider({ children }: MemeSpotProviderProps) {
   }, []);
 
   function setData(data: string[]) {
-    setImgContent(data);
+    setDataContent(data);
   }
 
   function setMemeSpotItem(clickedItem: string) {
-    setIndexItem(imgContent.indexOf(clickedItem as string));
+    setIndexItem(dataContent.indexOf(clickedItem as string));
     setSelectedItem(clickedItem);
   }
 
@@ -66,14 +68,15 @@ export function MemeSpotProvider({ children }: MemeSpotProviderProps) {
   }
 
   function arrowsClick(clickedItem: string, forward: boolean) {
+    console.log("ArrowCLICKED");
     if (forward) {
-      const hasNext = indexItem + 1 > imgContent?.length - 1;
+      const hasNext = indexItem + 1 > dataContent?.length - 1;
       // eslint-disable-next-line @typescript-eslint/no-unused-expressions
       hasNext
         ? setMemeSpotItem(clickedItem)
         : setMemeSpotItem(
-            imgContent?.find(
-              (item: string) => imgContent?.indexOf(item) === indexItem + 1
+            dataContent?.find(
+              (item: string) => dataContent?.indexOf(item) === indexItem + 1
             ) as string
           );
     } else {
@@ -82,27 +85,29 @@ export function MemeSpotProvider({ children }: MemeSpotProviderProps) {
       hasBackward
         ? setMemeSpotItem(clickedItem)
         : setMemeSpotItem(
-            imgContent?.find(
-              (item: string) => imgContent?.indexOf(item) === indexItem - 1
+            dataContent?.find(
+              (item: string) => dataContent?.indexOf(item) === indexItem - 1
             ) as string
           );
     }
   }
 
+  const contexValues = {
+    dataContent,
+    selectedItem,
+    isClicked,
+    isLoading,
+    indexItem,
+    setData,
+    handleLoadingState,
+    setMemeSpotItem,
+    setIndexItem,
+    arrowsClick,
+    handleCLick,
+  };
+
   return (
-    <MemeSpotContext.Provider
-      value={{
-        imgContent,
-        selectedItem,
-        isClicked,
-        isLoading,
-        setData,
-        handleLoadingState,
-        setMemeSpotItem,
-        arrowsClick,
-        handleCLick,
-      }}
-    >
+    <MemeSpotContext.Provider value={contexValues}>
       {children}
     </MemeSpotContext.Provider>
   );

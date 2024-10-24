@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import { getContent } from "../services/getContentData";
 import { useMemeSpot } from "../context/MemeSpotContext";
 import { FaArrowCircleUp } from "react-icons/fa";
-// import { AudioSpot } from "../components/AudiosPage/AudioSpot";
+import { AudioSpot } from "../components/AudiosPage/AudioSpot";
 import { AudiosList } from "../components/AudiosPage/AudiosList";
+// import { Player } from "../components/AudiosPage/Player";
 
 export function Audios() {
   const [showToUpButton, setShowToUpButton] = useState(false);
-  const { setData, handleLoadingState } = useMemeSpot();
+  const { isClicked, setData, handleLoadingState } = useMemeSpot();
 
   useEffect(() => {
     (async () => {
@@ -35,18 +36,19 @@ export function Audios() {
         </a>
       )}
 
-      {/* {isClicked ? (
+      {isClicked ? (
         <AudioSpot />
-      ) : ( */}
-      <div className="flex flex-col items-center w-full">
-        <h1 className="my-5 text-5xl font-bold font-FigTree">
-          Audios da Comunidade
-        </h1>
-        <p className="text-[#999EA2]">
-          Aqui você encontrará todos os audios da comunidade.
-        </p>
-      </div>
-      {/* )} */}
+      ) : (
+        // <Player />
+        <div className="flex flex-col items-center w-full">
+          <h1 className="my-5 text-5xl font-bold font-FigTree">
+            Audios da Comunidade
+          </h1>
+          <p className="text-[#999EA2]">
+            Aqui você encontrará todos os audios da comunidade.
+          </p>
+        </div>
+      )}
 
       <AudiosList />
     </section>

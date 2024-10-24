@@ -8,6 +8,7 @@ import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 // import { NavbarProvider } from "./context/navbarContext";
 import { MemeSpotProvider } from "./context/MemeSpotContext";
+import { PlayerContentProvider } from "./context/PlayerContext";
 
 const router = createBrowserRouter([
   {
@@ -36,19 +37,21 @@ export function App() {
   return (
     // <NavbarProvider>
     <MemeSpotProvider>
-      <Header />
-      <RouterProvider router={router} />
-      <ToastContainer
-        position="top-right"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={true}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
+      <PlayerContentProvider>
+        <Header />
+        <RouterProvider router={router} />
+        <ToastContainer
+          position="top-right"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={true}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+        />
+      </PlayerContentProvider>
     </MemeSpotProvider>
     // </NavbarProvider>
   );

@@ -6,9 +6,7 @@ import { Home } from "./pages/home";
 import { Header } from "./components/header";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-// import { NavbarProvider } from "./context/navbarContext";
-import { MemeSpotProvider } from "./context/MemeSpotContext";
-import { PlayerContentProvider } from "./context/PlayerContext";
+import { DataSpotProvider } from "./context/DataSpotContext";
 
 const router = createBrowserRouter([
   {
@@ -35,24 +33,20 @@ const router = createBrowserRouter([
 
 export function App() {
   return (
-    // <NavbarProvider>
-    <MemeSpotProvider>
-      <PlayerContentProvider>
-        <Header />
-        <RouterProvider router={router} />
-        <ToastContainer
-          position="top-right"
-          autoClose={5000}
-          hideProgressBar={false}
-          newestOnTop={true}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-        />
-      </PlayerContentProvider>
-    </MemeSpotProvider>
-    // </NavbarProvider>
+    <DataSpotProvider>
+      <Header />
+      <RouterProvider router={router} />
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={true}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+      />
+    </DataSpotProvider>
   );
 }

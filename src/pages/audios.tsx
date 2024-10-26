@@ -1,14 +1,13 @@
 import { useEffect, useState } from "react";
 import { getContent } from "../services/getContentData";
-import { useMemeSpot } from "../context/MemeSpotContext";
+import { useDataSpot } from "../context/DataSpotContext";
 import { FaArrowCircleUp } from "react-icons/fa";
-import { AudioSpot } from "../components/AudiosPage/AudioSpot";
 import { AudiosList } from "../components/AudiosPage/AudiosList";
-// import { Player } from "../components/AudiosPage/Player";
+import { Player } from "../components/AudiosPage/Player";
 
 export function Audios() {
   const [showToUpButton, setShowToUpButton] = useState(false);
-  const { isClicked, setData, handleLoadingState } = useMemeSpot();
+  const { isClicked, setData, handleLoadingState } = useDataSpot();
 
   useEffect(() => {
     (async () => {
@@ -37,9 +36,8 @@ export function Audios() {
       )}
 
       {isClicked ? (
-        <AudioSpot />
+        <Player />
       ) : (
-        // <Player />
         <div className="flex flex-col items-center w-full">
           <h1 className="my-5 text-5xl font-bold font-FigTree">
             Audios da Comunidade

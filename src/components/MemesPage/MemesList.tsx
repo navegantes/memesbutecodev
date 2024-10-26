@@ -1,10 +1,10 @@
 import { Loading } from "../loading";
-import { useMemeSpot } from "../../context/MemeSpotContext";
+import { useDataSpot } from "../../context/DataSpotContext";
 
 const baseUrl = import.meta.env.VITE_APP_BASEURL;
 
 export function MemesList() {
-  const { dataContent, isLoading, handleCLick } = useMemeSpot();
+  const { dataContent, isLoading, handleCLick } = useDataSpot();
 
   const sliceSize = 15;
 

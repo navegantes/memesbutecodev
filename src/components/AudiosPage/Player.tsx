@@ -1,6 +1,4 @@
 import { MutableRefObject, useEffect, useRef, useState } from "react";
-// import Image from "next/image";
-import { usePlayer } from "../../context/PlayerContext";
 import Slider from "rc-slider";
 
 import {
@@ -8,32 +6,27 @@ import {
   PiPauseFill,
   PiSkipBackFill,
   PiSkipForwardFill,
-  // PiShuffleBold,
-  // PiRepeatBold,
 } from "react-icons/pi";
 
-// import "rc-slider/assets/index.css";
-// import styles from "./styles.module.scss";
 import { convertDurationToTimeString } from "../../utils/convertDurationToString";
-import { useMemeSpot } from "../../context/MemeSpotContext";
+import { useDataSpot } from "../../context/DataSpotContext";
 
 const baseUrl = import.meta.env.VITE_APP_BASEURL;
 
 export function Player() {
   const audioRef = useRef() as MutableRefObject<HTMLAudioElement>;
-  const { selectedItem, isClicked } = useMemeSpot();
-  const [progress, setProgress] = useState(0);
+  const [progress, setProgress] = useState<number | number[]>(0);
 
   const {
+    selectedItem,
     isPlaying,
-    // currentAudioIndex,
     togglePlay,
     setPlayingState,
     playNext,
     playPrevious,
     hasNext,
     hasPrevious,
-  } = usePlayer();
+  } = useDataSpot();
 
   useEffect(() => {
     if (!audioRef.current) {
@@ -49,159 +42,110 @@ export function Player() {
 
   function setupProgressListener() {
     audioRef.current.currentTime = 0;
-    audioRef.current?.addEventListener("timeupdate", () => {
-      setProgress(Math.floor(progress));
+    audioRef.current.addEventListener("timeupdate", () => {
+      setProgress(Math.floor(audioRef.current.currentTime));
     });
   }
 
   function handleSeek(amount: number | number[]) {
     audioRef.current.currentTime = amount as number;
-    setProgress(amount as number);
+    setProgress(amount);
   }
 
-  // function handleEpisodeEnded() {
-  //   if (hasNext) {
-  //     playNext();
-  //   } else {
-  //     clearPlayerState();
-  //   }
-  // }
-
-  const audio = {
-    title: selectedItem,
-    duration: audioRef.current?.duration,
-    src: `${baseUrl}${selectedItem}`,
-  };
-  //audioList[currentAudioIndex];
-
   return (
-    <div className="w-full">
-      <header className="flex flex-col items-center">
-        <div className="my-2">
-          {audio ? (
-            <strong>{audio.title}</strong>
-          ) : (
-            <strong>Selecione um audio para ouvir</strong>
-          )}
-        </div>
-      </header>
-
-      {/* <footer className={!audio ? "border " : "border-2"}> */}
-      <footer>
-        <div className="flex justify-center gap-4 my-2 ">
-          <button
-            className={`${
-              !audio || !hasPrevious
-                ? "text-slate-600"
-                : "hover:text-buteco-orange text-buteco-cream"
-            }`}
-            type="button"
-            onClick={playPrevious}
-            disabled={!audio || !hasPrevious}
-          >
-            <PiSkipBackFill size={42} />
-          </button>
-          <button
-            type="button"
-            // disabled={!episode}
-            onClick={togglePlay}
-          >
-            {isPlaying ? (
-              <PiPauseFill
-                className="text-buteco-cream hover:text-buteco-orange"
-                size={42}
-              />
+    <div className="sticky top-0 z-10 flex flex-col items-center justify-between w-full p-4 mt-6 shadow-xl shadow-[#07131D] bg-[#07131D]">
+      <div className="flex flex-col justify-center w-2/5 gap-2 px-4">
+        <header className="flex flex-col items-center">
+          <div className="my-2">
+            {selectedItem ? (
+              <strong>{selectedItem}</strong>
             ) : (
-              <PiPlayFill
-                className="text-buteco-cream hover:text-buteco-orange"
-                size={42}
-              />
+              <strong>Selecione um audio para ouvir</strong>
             )}
-          </button>
-          <button
-            className={`${
-              !audio || !hasNext
-                ? "text-slate-600"
-                : "hover:text-buteco-orange text-buteco-cream"
-            }`}
-            type="button"
-            onClick={playNext}
-            disabled={!audio || !hasNext}
-          >
-            <PiSkipForwardFill size={42} />
-          </button>
+          </div>
+        </header>
 
-          {/* <div className="flex flex-col gap-1">
+        <footer>
+          <div className="flex justify-center gap-4 my-2 ">
             <button
+              className={`${
+                hasPrevious
+                  ? "hover:text-buteco-lager active:text-buteco-orange text-buteco-cream"
+                  : "text-slate-600"
+              }`}
               type="button"
-              disabled={!audio}
-              onClick={toggleLoop}
-              className={isLooping ? "border " : ""}
+              onClick={playPrevious}
+              disabled={!hasPrevious}
             >
-              <PiRepeatBold
-                className="text-buteco-cream hover:text-buteco-orange"
-                size={18}
-              />
+              <PiSkipBackFill size={42} />
+            </button>
+            <button type="button" onClick={togglePlay}>
+              {isPlaying ? (
+                <PiPauseFill
+                  className="text-buteco-cream hover:text-buteco-lager active:text-buteco-orange"
+                  size={42}
+                />
+              ) : (
+                <PiPlayFill
+                  className="text-buteco-cream hover:text-buteco-lager active:text-buteco-orange"
+                  size={42}
+                />
+              )}
             </button>
             <button
+              className={`${
+                hasNext
+                  ? "hover:text-buteco-lager active:text-buteco-orange text-buteco-cream"
+                  : "text-slate-600"
+              }`}
               type="button"
-              // disabled={!episode || audioList.length === 1}
-              // onClick={toggleShuffle}
-              className={isShuffling ? "border " : ""}
+              onClick={playNext}
+              disabled={!hasNext}
             >
-              <PiShuffleBold
-                className="text-buteco-cream hover:text-buteco-orange"
-                size={18}
-              />
+              <PiSkipForwardFill size={42} />
             </button>
-          </div> */}
-        </div>
-        {audio && (
+          </div>
           <audio
-            src={audio.src} //{episode.url}
+            src={`${baseUrl}${selectedItem}`}
             ref={audioRef}
-            autoPlay={isClicked}
-            // onEnded={handleEpisodeEnded}
-            // loop={isLooping}
+            autoPlay
             onPlay={() => setPlayingState(true)}
             onPause={() => setPlayingState(false)}
             onLoadedMetadata={setupProgressListener}
           />
-        )}
 
-        <div className="p-2">
-          {/* <div className="mt-2 mb-2"> */}
-          {audio ? (
+          <div className="p-2">
             <Slider
               className="flex items-center h-1 bg-buteco-cream"
-              max={audio.duration}
+              max={audioRef.current?.duration}
               value={progress}
               onChange={handleSeek}
               styles={{
-                track: { backgroundColor: "#ff8400", height: 4 },
-                handle: {
-                  borderColor: "#ff8400",
-                  borderWidth: 12,
-                  borderRadius: 50,
-                  height: 24,
-                  width: 24,
+                track: {
+                  backgroundColor: "#ff8400",
+                  height: 4,
                 },
-                rail: { backgroundColor: "#fff", borderColor: "#9f75ff" },
+                handle: {
+                  backgroundColor: "#ff8400",
+                  borderRadius: 50,
+                  height: 28,
+                  width: 28,
+                },
+                rail: {},
               }}
             />
-          ) : (
-            <div className=""> </div>
-          )}
-          {/* </div> */}
-          <div className="flex justify-center w-full mt-4">
-            <span>{convertDurationToTimeString(progress)}</span>
-            <span> / </span>
-            <span>
-              {convertDurationToTimeString(audioRef.current?.duration ?? 0)}
-            </span>
+            <div className="flex justify-center w-full mt-4">
+              <span>{convertDurationToTimeString(progress as number)}</span>
+              <span> / </span>
+              <span>
+                {convertDurationToTimeString(audioRef.current?.duration ?? 0)}
+              </span>
+            </div>
           </div>
-        </div>
-      </footer>
+        </footer>
+      </div>
+      <h1 className="mt-5 text-5xl font-bold font-FigTree">Outros Memes</h1>
+      <p className="text-[#999EA2]">Veja todos os outros memes da galera!</p>
     </div>
   );
 }

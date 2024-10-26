@@ -1,10 +1,10 @@
 import { Loading } from "../loading";
-import { useMemeSpot } from "../../context/MemeSpotContext";
+import { useDataSpot } from "../../context/DataSpotContext";
 
 const baseUrl = import.meta.env.VITE_APP_BASEURL;
 
 export function AudiosList() {
-  const { dataContent, isLoading, handleCLick } = useMemeSpot();
+  const { dataContent, isLoading, handleCLick } = useDataSpot();
 
   const sliceSize = 35;
 
@@ -21,13 +21,7 @@ export function AudiosList() {
                 className="flex flex-col items-center justify-between h-36 p-4 w-[32rem] max-h-36 gap-2 border-4 border-[#6F767C] rounded-xl bg-[#07131D] hover:border-buteco-lager hover:cursor-pointer"
                 onClick={() => handleCLick(item)}
               >
-                {/* <img
-                  className="object-cover bg-slate-200 h-full transition rounded-lg hover:scale-[2.5] hover:w-fit hover:h-fit w-full max-w-32"
-                  src={`${baseUrl}/${item}`}
-                /> */}
                 <audio src={`${baseUrl}/${item}`} controls />
-                {/* <source type="audio/mpeg" />
-                </audio> */}
                 <p className="flex justify-center w-full">
                   {item.split(".")[0].length > sliceSize
                     ? item.slice(0, sliceSize - 15) +

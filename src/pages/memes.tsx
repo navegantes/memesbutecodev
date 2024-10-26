@@ -4,13 +4,13 @@ import { useEffect, useState } from "react";
 import { FaArrowCircleUp } from "react-icons/fa";
 import { MemeSpot } from "../components/MemesPage/MemeSpot";
 import { MemesList } from "../components/MemesPage/MemesList";
-import { useMemeSpot } from "../context/MemeSpotContext";
+import { useDataSpot } from "../context/DataSpotContext";
 import { getContent } from "../services/getContentData";
 
 export function Memes() {
   const [showToUpButton, setShowToUpButton] = useState(false);
 
-  const { isClicked, setData, handleLoadingState } = useMemeSpot();
+  const { isClicked, setData, handleLoadingState } = useDataSpot();
 
   useEffect(() => {
     (async () => {

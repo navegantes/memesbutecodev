@@ -64,7 +64,6 @@ export function DataSpotProvider({ children }: DataSpotProviderProps) {
     setIndexItem(dataContent.indexOf(item));
     setSelectedItem(item);
     setIsPlaying(true);
-    console.log("Item: ", item, "CurrIndex: ", indexItem);
   }
 
   const hasPrevious = indexItem - 1 >= 0;
@@ -87,7 +86,6 @@ export function DataSpotProvider({ children }: DataSpotProviderProps) {
         ) as string
       );
     }
-    console.log("AudioNext: ", selectedItem, "Index: ", indexItem + 1, hasNext);
   }
 
   function playPrevious() {
@@ -99,7 +97,6 @@ export function DataSpotProvider({ children }: DataSpotProviderProps) {
         ) as string
       );
     }
-    console.log("AudioPrev: ", selectedItem, "Index: ", indexItem - 1, hasPrevious);
   }
 
   const contexValues = {
@@ -110,7 +107,6 @@ export function DataSpotProvider({ children }: DataSpotProviderProps) {
     indexItem,
     setData,
     handleLoadingState,
-    // setDataSpotItem,
     setIndexItem,
     handleCLick,
     isPlaying,

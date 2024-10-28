@@ -2,9 +2,9 @@ import loading from "../assets/loading.gif";
 
 export function Loading() {
   return (
-    <div className="flex flex-col w-1/4 my-10 justify-center items-center">
+    <div className="flex flex-col items-center justify-center w-1/4 my-10">
       <img className="rounded-full" src={loading} alt="Carregando" />
-      <span className="text-2xl m-4">Carregando...</span>
+      {/* <span className="m-4 text-2xl">Carregando...</span> */}
     </div>
   );
 }

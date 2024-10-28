@@ -8,7 +8,7 @@ import ChipTabs from "./ChipTabs";
 
 export function Header() {
   return (
-    <header className="flex flex-row items-center justify-center gap-6 p-4 mb-6 border-b-2 border-b-buteco-lager bg-buteco-dark">
+    <header className="flex flex-row items-center justify-center gap-6 p-4 mb-6 border-b-2 border-b-buteco-lager bg-[#07131D]">
       <div className="flex w-40 -translate-y-2 -rotate-[16deg] h-18 cursor-pointer">
         <a href="/">
           <ButecoLogo />

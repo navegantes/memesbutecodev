@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import { Audios } from "./pages/audios";
 import { Memes } from "./pages/memes";
+import { Videos } from "./pages/videos";
 import { Home } from "./pages/home";
 import { Header } from "./components/header";
 import { ToastContainer } from "react-toastify";
@@ -23,7 +24,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/videos",
-    element: <div className="flex justify-center">Videos</div>,
+    element: <Videos />,
   },
   {
     path: "/docs",

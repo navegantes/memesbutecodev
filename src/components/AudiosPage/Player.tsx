@@ -53,7 +53,7 @@ export function Player() {
   }
 
   return (
-    <div className="sticky top-0 z-10 flex flex-col items-center justify-between w-full p-4 mt-6 shadow-xl shadow-[#07131D] bg-[#07131D]">
+    <div className="sticky top-0 z-10 flex flex-col items-center justify-between w-full p-4 mt-6 shadow-xl shadow-buteco-dark bg-buteco-dark">
       <div className="flex flex-col justify-center w-2/5 gap-2 px-4">
         <header className="flex flex-col items-center">
           <div className="my-2">

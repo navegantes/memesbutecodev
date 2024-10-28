@@ -43,7 +43,7 @@ export function Memes() {
       ) : (
         <div className="flex flex-col items-center w-full">
           <h1 className="my-5 text-5xl font-bold font-FigTree">Memes da Galera</h1>
-          <p className="text-[#999EA2]">
+          <p className="text-[#999EA2] text-xl">
             Aqui você encontrará todos os memes da comunidade.
           </p>
         </div>

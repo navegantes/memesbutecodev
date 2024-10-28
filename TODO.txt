@@ -1,8 +1,14 @@
 
 # TODOS
-[ ] - Seleção deve deslizar na navbar
-[ ] - Pagina Memes deve ter paginação; Carregamento conforme o scroll/botão "abrir mais"
-[ ] - carrossel infinito nos depoimentos
+[ ] - ?Seleção deve deslizar na navbar
+[ ] - Paginas devem ter paginação; Carregamento conforme o scroll ou botão "abrir mais"
+[ ] - Pagina Audio deve mostrar a waveform ao tocar o audio
+[ ] - Spot da pagina memes deve subir/descer com o scroll
+[ ] - Carrossel infinito nos depoimentos
+[ ] - Video page
+[ ] - Implementar volume control
+[ ] - Link linkedin
+[ ] - Footer
 [x] - Tab navbar deve se manter selecionado ao clickar
 
 
@@ -10,6 +16,7 @@
 # Buteco Bot
 - https://github.com/brunofunnie/butecobot/blob/main/docs/BotCommands.md
 - https://github.com/butecodosdevs/butecobot
+- https://www.youtube.com/@ButecodosDevs
 
 Lista usuarios
 
@@ -42,4 +49,5 @@ CodeMoreira: CodeMoreira,
 Vinheteiro: matheusvidaltenorio,
 FelipeNeto: Wadsom ,
 DevNelson: nsaraiva,
+Kalango: carlosdaniel26
 

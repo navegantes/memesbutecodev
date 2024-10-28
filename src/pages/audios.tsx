@@ -42,7 +42,7 @@ export function Audios() {
           <h1 className="my-5 text-5xl font-bold font-FigTree">
             Audios da Comunidade
           </h1>
-          <p className="text-[#999EA2]">
+          <p className="text-[#999EA2] text-xl">
             Aqui você encontrará todos os audios da comunidade.
           </p>
         </div>

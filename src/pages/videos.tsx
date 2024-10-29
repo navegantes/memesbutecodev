@@ -5,7 +5,7 @@ import { FaArrowCircleUp } from "react-icons/fa";
 import { useDataSpot } from "../context/DataSpotContext";
 import { getContent } from "../services/getContentData";
 import { VideosList } from "../components/VideosPage/VideosList";
-import { VideoSpot } from "../components/VideosPage/VideoSpot";
+import { VideoPlayer } from "../components/VideosPage/VideoPlayer";
 
 export function Videos() {
   const [showToUpButton, setShowToUpButton] = useState(false);
@@ -39,7 +39,7 @@ export function Videos() {
       )}
 
       {isClicked ? (
-        <VideoSpot />
+        <VideoPlayer />
       ) : (
         <div className="flex flex-col items-center w-full">
           <h1 className="my-5 text-5xl font-bold font-FigTree">

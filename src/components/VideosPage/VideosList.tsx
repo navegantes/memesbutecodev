@@ -1,12 +1,7 @@
 import { Loading } from "../loading";
 import { useDataSpot } from "../../context/DataSpotContext";
-// import { lazy, Suspense } from "react";
 
 const baseUrl = import.meta.env.VITE_APP_BASEURL;
-
-// const MemeImg = lazy(() =>
-//   import("./MemeImg").then((module) => ({ default: module.MemeImg }))
-// );
 
 export function VideosList() {
   const { dataContent, isLoading, handleCLick } = useDataSpot();

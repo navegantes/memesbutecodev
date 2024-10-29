@@ -54,7 +54,7 @@ export function Player() {
 
   return (
     <div className="sticky top-0 z-10 flex flex-col items-center justify-between w-full p-4 mt-6 shadow-xl shadow-buteco-dark bg-buteco-dark">
-      <div className="flex flex-col justify-center w-2/5 gap-2 px-4">
+      <div className="flex flex-col justify-center w-2/5 gap-2 px-4 bg-[#07131D] border-4 border-[#6F767C] rounded-xl">
         <header className="flex flex-col items-center">
           <div className="my-2">
             {selectedItem ? (
@@ -117,7 +117,7 @@ export function Player() {
           <div className="p-2">
             <Slider
               className="flex items-center h-1 bg-buteco-cream"
-              max={audioRef.current?.duration}
+              max={Math.floor(audioRef.current?.duration)}
               value={progress}
               onChange={handleSeek}
               styles={{
@@ -130,6 +130,7 @@ export function Player() {
                   borderRadius: 50,
                   height: 28,
                   width: 28,
+                  transform: "translateX(0%)",
                 },
                 rail: {},
               }}

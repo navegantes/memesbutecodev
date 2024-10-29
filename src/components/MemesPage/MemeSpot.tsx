@@ -19,7 +19,7 @@ export function MemeSpot() {
           onClick={playPrevious}
           className={`${
             hasPrevious
-              ? "hover:text-buteco-lager active:text-buteco-orange text-buteco-cream"
+              ? "hover:bg-buteco-lager transition-all h-[10rem] rounded-l-full active:text-buteco-orange text-buteco-cream"
               : "text-slate-600"
           }`}
         >
@@ -40,7 +40,7 @@ export function MemeSpot() {
           onClick={playNext}
           className={`${
             hasNext
-              ? "hover:text-buteco-lager active:text-buteco-orange text-buteco-cream"
+              ? "hover:bg-buteco-lager transition-all h-[10rem] rounded-r-full active:text-buteco-orange text-buteco-cream"
               : "text-slate-600"
           }`}
         >

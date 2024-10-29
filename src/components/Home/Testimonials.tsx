@@ -2,9 +2,6 @@ import { useEffect, useState } from "react";
 import { UserType, UsersDataType, getData } from "../../services/getContentData";
 import { Loading } from "../loading";
 import { TestimonialCard } from "./TestimonialCard";
-// import { data } from "framer-motion/client";
-
-// import { data } from "framer-motion/client";
 
 export function Testimonials() {
   const [usersData, setUsersData] = useState<UsersDataType | null>(null);

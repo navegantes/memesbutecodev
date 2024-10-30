@@ -1,5 +1,6 @@
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { useDataSpot } from "../../context/DataSpotContext";
+import { SpotCloseButton } from "../Buttons/SpotCloseButton";
 
 export interface MemeSpotProps {
   data: string[];
@@ -25,7 +26,9 @@ export function MemeSpot() {
         >
           <IoIosArrowBack size={42} />
         </button>
-        <div className="flex flex-col items-center justify-between p-6 w-[46.5rem] h-[36rem] gap-2 border-4 border-[#6F767C] rounded-3xl bg-[#07131D]">
+        <div className="flex flex-col relative items-center justify-between p-6 w-[46.5rem] h-[36rem] gap-2 border-4 border-[#6F767C] rounded-3xl bg-[#07131D]">
+          <SpotCloseButton />
+
           <div className="w-full h-full max-h-[29.5rem]">
             <img
               className="object-contain w-full h-full transition-all rounded-lg"

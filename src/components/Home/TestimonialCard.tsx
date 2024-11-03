@@ -16,9 +16,9 @@ export function TestimonialCard({ user }: UserPropsType) {
       hover:scale-[1.2] hover:rotate-[4deg]`}
     >
       <div className="relative flex flex-row items-center gap-4">
-        <MdOutlineFormatQuote className="absolute opacity-75 -top-4 -right-2 rotate-12 size-20 text-slate-800" />
+        <MdOutlineFormatQuote className="absolute top-0 opacity-75 -right-2 rotate-12 size-20 text-slate-800" />
         <img
-          className="p-1 size-16 rounded-full border-[2px] border-buteco-orange"
+          className="p-1 w-20 h-20 mt-4 rounded-full border-[2px] border-buteco-orange"
           src={user.avatar_url}
           alt="Avatar do Usuário"
         />

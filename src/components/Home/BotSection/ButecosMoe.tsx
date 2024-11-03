@@ -191,7 +191,7 @@ export function ButecosMoe() {
           </div>
         </AnimatePresence>
 
-        <div className="flex flex-col gap-10">
+        <div className="flex flex-col gap-10 mb-10">
           <img
             className="self-center mt-8"
             src="/img/butecobot.png"

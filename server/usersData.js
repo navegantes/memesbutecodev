@@ -183,7 +183,7 @@ export const testimonies = [
     login: "AninhaPardini",
     id: 108814319,
     testimony:
-      "Excepteur pariatur deserunt culpa eu aliquip dolore consectetur. Laboris elit incididunt proident veniam irure aute sint. Velit aute eu incididunt non adipisicing. Incididunt laborum dolor esse tempor dolore consectetur mollit.",
+      "Êta trêm baum esse Buteco dos Devs viu sô. A comunidade é linda igual o mac. no meu mac parece",
   },
   {
     login: "Gus-fs",
@@ -194,8 +194,7 @@ export const testimonies = [
   {
     login: "carolinarigaudfelix",
     id: 83124624,
-    testimony:
-      "Excepteur pariatur deserunt culpa eu aliquip dolore consectetur. Laboris elit incididunt proident veniam irure aute sint. Velit aute eu incididunt non adipisicing. Incididunt laborum dolor esse tempor dolore consectetur mollit.",
+    testimony: "E aí gente?",
   },
   {
     login: "devhenrique22",

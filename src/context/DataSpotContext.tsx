@@ -10,6 +10,7 @@ interface DataSpotContextType {
   handleCLick: (item: string) => void;
   setIndexItem: (index: number) => void;
   handleLoadingState: (value: boolean) => void;
+  setIsClicked: (value: boolean) => void;
   //
   isPlaying: boolean;
   setPlayingState: (state: boolean) => void;
@@ -105,17 +106,18 @@ export function DataSpotProvider({ children }: DataSpotProviderProps) {
     isClicked,
     isLoading,
     indexItem,
+    isPlaying,
+    hasNext,
+    hasPrevious,
     setData,
     handleLoadingState,
     setIndexItem,
+    setIsClicked,
     handleCLick,
-    isPlaying,
     setPlayingState,
     togglePlay,
     playNext,
     playPrevious,
-    hasNext,
-    hasPrevious,
   };
 
   return (

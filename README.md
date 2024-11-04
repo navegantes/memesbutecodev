@@ -40,7 +40,31 @@
   <img src="./public/Logo.png" alt="PokeReal Dex" />
 </div>
 
-# React + TypeScript + Vite
+# 🍻 Sobre
+
+A página Memes Buteco dos Devs reuni todo o matérial descontraído proveniente da mente criativa dos membros da nossa comunidade. Os memes, os audios e os vídeos são fruto ~~da nossa sessão de terapia diária~~ dos nossos encontro diário, uma forma da nossa comunidade ter um momento de diversão, reflexões filosoficas e descontração em meio ao estresse da vida de desenvolvedor de software. Faça parte dos mais 13k desenvolvedores do Buteco mais entrozado da bolha tech.
+
+# 💻 Tecnologias
+
+- ReactJS
+- TailwindCSS
+- Typescript
+- NodeJS
+
+## 🎀 Melhorias, Firulas e Frufrus
+
+<!-- - [ ] Hover deve deslizar na navbar. -->
+
+"Não palpite commite"  
+Solte sua criatividade e dê sua contribuição.
+
+- [ ] Paginas devem ter paginação; Carregamento conforme o scroll ou botão "abrir mais".
+- [ ] Pagina Audio deve mostrar a onda/frequencia animada no destaque ao tocar o audio.
+- [ ] Destaque das paginas (?Memes/Audio) devem subir/descer com o scroll.
+- [ ] Carrossel infinito nos depoimentos da home.
+- [ ] Implementar controle de volume.
+
+<!-- # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
@@ -89,9 +113,9 @@ export default tseslint.config({
     ...react.configs["jsx-runtime"].rules,
   },
 });
-```
+``` -->
 
-## 🤝 Colaboradores
+## 🤝 Colaboradores do Buteco
 
 Agradecemos às seguintes pessoas que contribuíram para este projeto:
 

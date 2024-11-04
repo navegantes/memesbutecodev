@@ -8,18 +8,13 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "server": "node -r dotenv/config server/api.js",
-    "test-server": "json-server --watch server/testData.json --routes server/routes.json -w -p 8000"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@radix-ui/react-toast": "^1.2.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
-    "cors": "^2.8.5",
-    "express": "^4.19.2",
     "framer-motion": "^11.5.4",
-    "json-server": "^0.17.4",
     "lucide-react": "^0.439.0",
     "rc-slider": "^11.1.7",
     "react": "^18.3.1",
@@ -33,9 +28,6 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
-    "@types/cors": "^2.8.17",
-    "@types/express": "^4.17.21",
-    "@types/node": "^22.5.5",
     "@types/react": "^18.3.9",
     "@types/react-dom": "^18.3.0",
     "@vitejs/plugin-react": "^4.3.1",

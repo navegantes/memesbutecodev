@@ -2,7 +2,8 @@ import { testimonies } from "./usersData.js";
 
 export async function getLinks(url) {
   const resp = await fetch(url, {
-    mode: "no-cors",
+    method: "GET",
+    headers: { Accept: "*/*" },
   });
 
   const data = await resp.text();
@@ -42,12 +43,12 @@ export async function getGithubUsers(users) {
   const resp = await Promise.all(
     await users.map(
       async (user) =>
-        await fetch(`${baseUrl}/${user}`, {
+        await fetch(`${baseUrl}${user}`, {
           headers: {
-            Authorization: `Bearer ${API_TOKEN}`,
+            Accept: "*/*",
+            // Authorization: `Bearer ${API_TOKEN}`,
           },
           method: "GET",
-          mode: "no-cors",
         })
     )
   );
@@ -63,7 +64,7 @@ export async function getGithubUsers(users) {
         bio: data.bio,
         name: data.name,
         location: data.location,
-        testimony: testimonies.find((user) => user.id === data.id).testimony,
+        testimony: testimonies.find((user) => user.id == data.id).testimony,
       };
     })
   );

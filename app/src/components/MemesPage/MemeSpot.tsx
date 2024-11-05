@@ -35,10 +35,6 @@ export function MemeSpot() {
               className="object-contain h-full transition-all rounded-lg w-ful"
               src={`${baseUrl}${selectedItem}`}
             />
-            {/* <img
-              className="object-contain w-full h-full transition-all rounded-lg"
-              src={`${baseUrl}${selectedItem}`}
-            /> */}
           </div>
           <div className="flex justify-center w-full">
             <span className="text-base">{selectedItem}</span>

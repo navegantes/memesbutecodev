@@ -37,7 +37,7 @@
 <br>
 
 <div align="center" id="top"> 
-  <img src="./public/Logo.png" alt="PokeReal Dex" />
+  <img src="./app/public/Logo.png" alt="Buteco Logo" />
 </div>
 
 # 🍻 Sobre

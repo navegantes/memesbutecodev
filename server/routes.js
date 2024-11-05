@@ -4,7 +4,7 @@ import { usersList } from "./usersData.js";
 
 export const routes = express.Router();
 
-routes.get("/api/hello-world", async (_, res) => {
+routes.get("/", async (_, res) => {
   return res.status(200).send({ Hello: "World" });
 });
 

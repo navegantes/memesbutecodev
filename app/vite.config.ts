@@ -6,8 +6,14 @@ import path from "path";
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
+    host: true,
+    port: 5173,
+    strictPort: true,
+    watch: {
+      usePolling: true,
+    },
     proxy: {
-      "/api": "http://localhost:8000",
+      "/api": "http://0.0.0.0:8000",
     },
   },
   plugins: [

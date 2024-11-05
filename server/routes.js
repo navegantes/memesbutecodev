@@ -4,6 +4,10 @@ import { usersList } from "./usersData.js";
 
 export const routes = express.Router();
 
+routes.get("/api/hello-world", async (_, res) => {
+  return res.status(200).send({ Hello: "World" });
+});
+
 routes.get("/api/content", async (_, res) => {
   try {
     const data = await getLinks(`${process.env.VITE_APP_BASEURL}`);

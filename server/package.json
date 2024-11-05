@@ -1,10 +1,12 @@
 {
   "name": "server",
   "version": "1.0.0",
+  "type": "module",
   "main": "api.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "node -r dotenv/config api.js",
+    "dev": "node api.js",
     "test-server": "json-server --watch testData.json --routes routes.json -w -p 8000"
   },
   "keywords": [],

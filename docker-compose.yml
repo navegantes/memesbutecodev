@@ -1,0 +1,34 @@
+services:
+  # Add the node-js service
+  server:
+    # Location to the node.js dockerfile
+    build:
+      context:
+        ./server
+        # Name of the dockerfile
+      dockerfile: Dockerfile
+    container_name: butecomemes-server
+    restart: always
+    ports:
+      # Host port:Container port
+      - "8000:8000"
+    stdin_open: true
+    tty: true
+    # volumes:
+    #   # Bind-mounts configuration
+    #   - ./node:/app
+    #   # Ignoring any changes made in "node_modules" folder
+    #   - ./app/node_modules
+  react:
+    # Location to the react.js dockerfile
+    build:
+      context:
+        ./app
+        # Name of the dockerfile
+      dockerfile: Dockerfile
+    container_name: butecomemes-page
+    restart: always
+    ports:
+      # Host port:Container port
+      - "5173:5173"
+    stdin_open: true

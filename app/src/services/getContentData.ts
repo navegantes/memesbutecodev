@@ -19,22 +19,16 @@ export interface ContentDataType {
   docs: string[];
 }
 
+const baseApiUrl = import.meta.env.VITE_APP_BASEAPIURL;
+
 export const getContent = async () => {
-  return await api<ContentDataType>("/api/content", {
-    method: "GET",
-    mode: "no-cors",
-  });
+  return await api<ContentDataType>(baseApiUrl + "/api/content");
 };
 
 export const getGithubUsersData = async () => {
-  return await api<UsersDataType>("/api/github-users", {
-    mode: "no-cors",
-  });
+  return await api<UsersDataType>(baseApiUrl + "/api/github-users");
 };
 
 export const getData = async (route: string) => {
-  return await api<ContentDataType & UsersDataType>(route, {
-    method: "GET",
-    mode: "no-cors",
-  });
+  return await api<ContentDataType & UsersDataType>(baseApiUrl + route);
 };

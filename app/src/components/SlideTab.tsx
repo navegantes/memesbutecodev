@@ -53,7 +53,7 @@ export const SlideTabs = () => {
 
 // @ts-expect-error
 const Tab = ({ children, setPosition, linkTo }) => {
-  const ref = useRef(null);
+  const ref = useRef<HTMLLIElement>(null);
 
   return (
     <a href={linkTo}>

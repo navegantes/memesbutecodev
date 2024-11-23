@@ -123,6 +123,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
   <tr>
     <td align="center">
       <a href="#">
+      <b>Desenvolvedor</b><br>
         <img src="https://github.com/navegantes.png" width="100px;" alt="Foto do perfil de Navegantes no GitHub"/><br>
         <sub>
           <b>Navegantes</b>
@@ -131,9 +132,19 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
     </td>
     <td align="center">
       <a href="https://github.com/CodeMoreira">
+        <b>Designer</b><br>
         <img src="https://github.com/CodeMoreira.png" width="100px;" alt="Foto do perfil da TreinaWeb no GitHub"/><br>
         <sub>
           <b>Gabriel Moreira Mattos</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/viihuugo">
+      <b>Desenvolvedor</b><br>
+        <img src="https://github.com/viihuugo.png" width="100px;" alt="Foto do perfil de Navegantes no GitHub"/><br>
+        <sub>
+          <b>Victor Alves</b>
         </sub>
       </a>
     </td>

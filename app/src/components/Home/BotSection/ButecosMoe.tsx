@@ -89,7 +89,7 @@ export function ButecosMoe() {
             </motion.div>
           </div>
 
-          <div className="relative flex flex-col items-end w-full gap-8">
+          <div className="relative flex flex-col gap-8">
             <motion.div
               viewport={{ once: true, amount: 0.8 }}
               initial="offscreenRL"
@@ -117,7 +117,10 @@ export function ButecosMoe() {
               initial="offscreenLR"
               whileInView="onscreen"
             >
-              <motion.div variants={cardVariants}>
+              <motion.div 
+                style={{ position: "relative", top: -300 }}
+                variants={cardVariants}
+              >                
                 <img
                   className={`absolute scale-110 left-56 -top-6 -rotate-12 ${hoverImg}`}
                   src="/img/patroes.png"
@@ -128,7 +131,7 @@ export function ButecosMoe() {
               </motion.div>
               <motion.div variants={cardVariants}>
                 <img
-                  className={`absolute bottom-0 scale-125 -left-8 rotate-12 ${hoverImg}`}
+                  className={`absolute scale-125 bottom-0 -left-8 rotate-12 ${hoverImg}`}
                   src="/img/roleta.png"
                   alt=""
                   width={184}
